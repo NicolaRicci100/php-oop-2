@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . '/models/product.php';
+include_once __DIR__ . '/models/product.php';
+include_once __DIR__ . '/models/Animal.php';
 
 $item_1 = new Product(1, 'Cani', 'Croccantini', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg');
 $item_2 = new Product(2, 'Gatti', 'Scatoletta', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg');
@@ -43,7 +44,7 @@ $products = [$item_1, $item_2, $item_3, $item_4];
                 <img src="<?= $product->img ?>" class="card-img-top" alt="<?= $product->name ?>">
                 <div class="card-body">
                     <h5 class="card-title"><?= $product->name ?></h5>
-                    <p class="card-text"><?= $product->animal ?></p>
+                    <p class="card-text"><?= $product->animals ?></p>
                 </div>
             </div>
         <?php endforeach; ?>

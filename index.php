@@ -1,5 +1,10 @@
 <?php
-var_dump('Prova!');
+include __DIR__ . '/models/product.php';
+
+$item_1 = new Product(1, 'Cane', 'Guinzaglio');
+var_dump($item_1);
+$item_2 = new Product(2, 'Gatto', 'Scatoletta');
+var_dump($item_2);
 ?>
 
 

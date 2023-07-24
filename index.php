@@ -1,10 +1,13 @@
 <?php
 include __DIR__ . '/models/product.php';
 
-$item_1 = new Product(1, 'Cane', 'Guinzaglio');
-var_dump($item_1);
-$item_2 = new Product(2, 'Gatto', 'Scatoletta');
-var_dump($item_2);
+$item_1 = new Product(1, 'Cane', 'Cibo', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg');
+
+$item_2 = new Product(2, 'Gatto', 'Cibo', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg');
+
+
+$products = [$item_1, $item_2];
+var_dump($products);
 ?>
 
 
@@ -30,7 +33,15 @@ var_dump($item_2);
 </head>
 
 <body>
-
+    <?php foreach ($products as $product) : ?>
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><?php $product->type ?></h5>
+                <p class="card-text"><?php $product->animal ?></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
 </body>
 
 </html>

@@ -3,14 +3,14 @@ class Product
 {
   public $id;
   public $animal;
-  public $type;
+  public $name;
   public $img;
 
-  public function __construct(int $id, string $animal, string $type, $img)
+  public function __construct(int $id, string $animal, string $name, $img)
   {
     $this->id = $id;
     $this->animal = $animal;
-    $this->type = $type;
+    $this->name = $name;
     $this->img = $img;
   }
 }

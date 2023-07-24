@@ -8,7 +8,7 @@ $item_4 = new Product(4, 'Uccelli', 'Voliera', 'https://arcaplanet.vtexassets.co
 
 
 $products = [$item_1, $item_2, $item_3, $item_4];
-var_dump($products);
+// var_dump($products);
 ?>
 
 
@@ -34,9 +34,12 @@ var_dump($products);
 </head>
 
 <body>
+    <header>
+        <h1 class="text-center my-3 text-secondary">Selezione di prodotti per animali</h1>
+    </header>
     <section class="container d-flex">
         <?php foreach ($products as $product) : ?>
-            <div class="card">
+            <div class="card m-3 p-1 bg-secondary text-white">
                 <img src="<?= $product->img ?>" class="card-img-top" alt="<?= $product->name ?>">
                 <div class="card-body">
                     <h5 class="card-title"><?= $product->name ?></h5>

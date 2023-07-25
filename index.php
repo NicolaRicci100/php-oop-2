@@ -24,11 +24,11 @@ include_once __DIR__ . '/models/Product.php';
     <section class="container d-flex flex-wrap justify-content-around">
         <?php foreach ($products as $product) : ?>
             <div class="card m-3 p-1 bg-secondary text-white">
-                <img src="<?= $product->img ?>" class="card-img-top" alt="<?= $product->name ?>">
+                <img src="<?= $product->img ?>" class="card-img-top" alt="<?= $product->getName() ?>">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $product->name ?></h5>
-                    <p class="card-text"><?= $product->animal ?></p>
-                    <p class="card-text fst-italic text-black"><?= $product->type ?></p>
+                    <h5 class="card-title"><?= $product->getName() ?></h5>
+                    <p class="card-text"><?= $product->getAnimal() ?></p>
+                    <p class="card-text fst-italic text-black"><?= $product->getType() ?></p>
                 </div>
             </div>
         <?php endforeach; ?>

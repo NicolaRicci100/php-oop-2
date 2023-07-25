@@ -2,18 +2,48 @@
 class Product
 {
   public $id;
-  public $animal;
-  public $name;
+  private $animal;
+  private $name;
   public $img;
-  public $type;
+  private $type;
 
   public function __construct(int $id, string $animal, string $name, $img, string $type)
   {
     $this->id = $id;
-    $this->animal = $animal;
-    $this->name = $name;
+    $this->setAnimal($animal);
+    $this->setName($name);
     $this->img = $img;
+    $this->setType($type);
+  }
+  //tipo di animale
+  public function getAnimal()
+  {
+    return $this->animal;
+  }
+  public function setAnimal($animal)
+  {
+    $this->animal = $animal;
+    return $this;
+  }
+  //nome prodotto
+  public function getName()
+  {
+    return $this->name;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+    return $this;
+  }
+  //tipo di prodotto
+  public function getType()
+  {
+    return $this->type;
+  }
+  public function setType($type)
+  {
     $this->type = $type;
+    return $this;
   }
 }
 
